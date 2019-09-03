@@ -46,8 +46,8 @@ Declare Variables
 Declare Integer roof_length = 640
 Declare Integer roof_width = 240
 Declare Integer gallon_conv_from_cubic_inches	= 231
-Declare Integer avg_rainfall = 1		// amount of rainfall average
-Declare Integer total_rainfall_cinches = 0	// amount of rainfull on a particular roof
+Declare Integer rainfall_height = 1		// inches - amount of rainfall average
+Declare Integer total_rainfall_cinches = 0	// cubic inches - amount of rainfull on a particular roof
 Declare Float total_rainfall_gals = 0;
 Declare Boolean finished = false;
 Option 1
@@ -59,9 +59,9 @@ roof_width = 240	// inches
 
 While (not Finished){
 	// Get Values from user
-	avg_rainfall = GetAvgRainfall()	// inches
-	roof_length = GetRoofLength()	// inches
-	roof_width = GetRoofWidth()	// inches
+	rainfall_height = GetAvgRainfall()	// inches
+	roof_length = GetRoofLengthFt()*12	// inches
+	roof_width = GetRoofWidthFt()*12	// inches
 
 	// Calculate total_rainfull
 	total_rainfall_cinches = roof_length*roof_width*avg_rainfall 	// cubic inches
