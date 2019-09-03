@@ -1,0 +1,84 @@
+Program Design Exercise
+
+IPO
+Input
+Process
+Output
+
+Objective
+Define the problem by constructing an algorithm using pseudocode
+What control structures (sequence, selection and repetition) are required?
+What variables are required?
+Show a check of your solution with test data for at least two valid test cases
+1. Find the average score
+A program is needed to prompt the user operator for ten exam scores, calculate the average score and display the result to the screen. The average score is calculated as the sum of the scores divided by the number of scores.
+
+Pseudo Code
+Declare Integer exam_score
+Declare Integer Sum
+Declare Integer Avg
+
+Option 1
+Get Score from user 10 times
+Get Sum of these 10 scores
+Calculate the average value of these 10 scores
+Display the average value to the user
+
+Option 2
+for (Integer counter = 0; counter < 10; counter++){
+	Prompt user for exam_score
+	Get exam_score
+	Sum = Sum + exam_score
+}
+Avg = Sum/10
+Display Avg
+
+
+2. How much water runs off the roof
+How much water runs off a roof in a rain storm?
+
+Pseudo Code
+Assumptions: Overall inches of rainfall is one inch
+Size of Roof = 600x240 inches square
+Total Amount of rainfall on the roof is 600x240x1 = 144K in3 => Gallons = 144K in3/231
+
+Declare Variables
+Declare Integer roof_length = 640
+Declare Integer roof_width = 240
+Declare Integer gallon_conv_from_cubic_inches	= 231
+Declare Integer avg_rainfall = 1		// amount of rainfall average
+Declare Integer total_rainfall_cinches = 0	// amount of rainfull on a particular roof
+Declare Float total_rainfall_gals = 0;
+Declare Boolean finished = false;
+Option 1
+
+// Set default values
+avg_rainfall = 1	// inches
+roof_length = 640	// inches
+roof_width = 240	// inches
+
+While (not Finished){
+	// Get Values from user
+	avg_rainfall = GetAvgRainfall()	// inches
+	roof_length = GetRoofLength()	// inches
+	roof_width = GetRoofWidth()	// inches
+
+	// Calculate total_rainfull
+	total_rainfall_cinches = roof_length*roof_width*avg_rainfall 	// cubic inches
+	total_rainfall_gals = total_rainfall_cinches/gallon_conv_from_cubic
+	Display total_rainfall_gals
+	finished = AskUserIfFinished()
+}
+
+Option 2
+DoWhile (not Finished){
+// Same as above
+}
+
+To calculate the runoff from any given rainfall: Take the dimensions of the footprint of the roof and convert them to inches. (So, a 50' x 20' roof is 600" x 240"). Multiply the roof dimensions by the number of inches of rainfall. In this example, 600" x 240" x 1" = 144,000 cubic inches of water. Divide that result by 231 to get the number of gallons (because 1 gallon = 231 cubic inches). (144,000/231 = 623.38).
+
+Write the pseudocode for the above problem. If you use the numbers provided in the example then the correct pseudocode will calculate the same result.
+
+
+
+
